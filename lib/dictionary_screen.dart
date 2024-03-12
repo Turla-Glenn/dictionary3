@@ -23,7 +23,7 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
     if (response.statusCode == 200) {
       final List<dynamic> responseData = jsonDecode(response.body);
       setState(() {
-        _definitions.clear(); // Clear previous definitions
+        _definitions.clear(); // Clear previous definitionse
         _definitions = responseData
             .map((json) => Definition.fromJson(json))
             .toList();
